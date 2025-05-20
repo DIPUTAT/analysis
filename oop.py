@@ -5,6 +5,11 @@ class Animal():
     ears = 2
     teeths = True
 
+    def __init__ (self, name, age):
+        print("Я крутой")
+        self.name = name
+        self.age = age
+
     def eat(self):
         print("Фига как вкусно")
 
@@ -12,9 +17,21 @@ class Animal():
         print("zzz")
 
     def walk(self):
-        print("Гулять")
+        print("Гуляю")
 
-murzik = Animal()
-bobik = Animal()
-print(murzik.legs)
-murzik.sleep()
+murzik = Animal("Мурзик", 52)
+bobik = Animal("Бобик", 89)
+
+
+class People(Animal):
+    legs = 2
+    def work(self):
+        print("ВЫХООООДНОЙ")
+
+    def sleep(self):
+        print("Я не фигней занимаюсь")
+
+dusha = People("Дюша", 17)
+print(dusha.legs)
+
+
